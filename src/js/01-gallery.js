@@ -1,7 +1,3 @@
-// Kullanılacak kısmın import edilmesi
-import SimpleLightbox from "simplelightbox";
-// Ek stillerin eklenmesi
-import "simplelightbox/dist/simple-lightbox.min.css";
 
 const galleryItems = [
   {
@@ -79,14 +75,7 @@ galleryItems.forEach(item => {
   galleryLink.classList.add('gallery__link');
   galleryLink.setAttribute('href', item.original);
 
-  galleryLink.addEventListener('click', event => {
-    event.preventDefault(); // Resim indirme işlemi durduruldu !!!!
-  });
 
-  document.addEventListener('keydown', event => {
-    if (event.code === 'Escape') {
-    }
-  });
 
   const image = document.createElement('img');
   image.classList.add('gallery__image');
@@ -98,6 +87,11 @@ galleryItems.forEach(item => {
   galleryLink.appendChild(image);
   gallery.appendChild(galleryItem);
 });
+
+
+
+
+
 
 let lightbox = new SimpleLightbox('.gallery li > a', {
   captionsData: 'alt',
