@@ -1,5 +1,7 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+// Kullanılacak kısmın import edilmesi
+import SimpleLightbox from "simplelightbox";
+// Ek stillerin eklenmesi
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 const galleryItems = [
   {
@@ -97,7 +99,7 @@ galleryItems.forEach(item => {
   gallery.appendChild(galleryItem);
 });
 
-var lightbox = new SimpleLightbox('.gallery li > a', {
+let lightbox = new SimpleLightbox('.gallery li > a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
